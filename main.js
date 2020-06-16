@@ -33,7 +33,7 @@ let count = 0;
 function endGame() {
     count += 1;
     console.log(count);
-    if (count === 1) {
+    if (count === 6) {
         showPopup();
     }
 }
