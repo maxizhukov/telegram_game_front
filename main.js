@@ -23,9 +23,19 @@ function flipCard() {
        checkForMatching();
 }
 
+
 function checkForMatching() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-    isMatch ? disableCards() : unflipCards();
+    isMatch ? (disableCards(), endGame()) : unflipCards();
+
+}
+let count = 0;
+function endGame() {
+    count += 1;
+    console.log(count);
+    if (count === 1) {
+        showPopup();
+    }
 }
 
 function disableCards() {
@@ -66,3 +76,15 @@ function hidePopup() {
 }
 
 start.addEventListener('click', hidePopup);
+
+// Popup Endgame
+let popupend = document.getElementById('popup__end')
+function showPopup() {
+    popupend.style.opacity = "1"
+    popupend.style.visibility = "visible"
+}
+
+
+
+
+
