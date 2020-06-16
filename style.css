@@ -1,11 +1,14 @@
 * {
     padding: 0;
     margin: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 body {
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background: #060AB2;
 }
@@ -14,8 +17,12 @@ body {
     width: 640px;
     height: 640px;
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-perspective: 1000px;
     perspective: 1000px;
 }
 
@@ -24,17 +31,31 @@ body {
     height: calc(33.333% - 10px);
     margin: 5px;
     position: relative;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    -o-transition: transform .5s;
     transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
 }
 
 .memory-card:active {
+    -webkit-transform: scale(.97);
+    -ms-transform: scale(.97);
     transform: scale(.97);
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    -o-transition: transform .2s;
     transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
 }
 
 .memory-card.flip {
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
@@ -46,10 +67,12 @@ body {
     position: absolute;
     border-radius: 5px;
     background: #1c7ccc;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
 .front-face {
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
@@ -65,8 +88,14 @@ body {
 }
 .popup__body {
     min-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding: 30px 10px;
 }
@@ -90,8 +119,14 @@ body {
     font-size: 30px;
     color: black;
     text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -101,8 +136,15 @@ body {
         height: calc(25% - 10px);
         margin: 5px;
         position: relative;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
         transform: scale(1);
+        -webkit-transform-style: preserve-3d;
         transform-style: preserve-3d;
+        -webkit-transition: -webkit-transform .5s;
+        transition: -webkit-transform .5s;
+        -o-transition: transform .5s;
         transition: transform .5s;
+        transition: transform .5s, -webkit-transform .5s;
     }
 }
