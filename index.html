@@ -10,6 +10,7 @@
     <title>Guess two cards</title>
 </head>
 <body>
+<p id="score__now" class="score__now"></p>
     <section class="memory-game">
         <div class="memory-card" data-framework="aurelia">
             <img src="img/aurelia.svg" alt="Aurelia" class="front-face">
@@ -69,13 +70,13 @@
             </div>
         </div>
     </div>
-    </section>
     <div id="popup__end" class="popup__end">
         <div class="popup__body">
             <div class="popup__content">
                 <div class="popup__title">WIN! WIN! WIN!</div>
                 <div class="popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci at consequatur et impedit maxime modi veritatis vitae. Error, quo.</div>
-                <p class="score" id="score">Score</p>
+                <p class="score" id="score__result"></p>
+                <p class="prize" id="prize"></p>
                 <a href="#" class="popup__restart" id="restart" onClick="window.location.reload()">retry</a>
             </div>
         </div>

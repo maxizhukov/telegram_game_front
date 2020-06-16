@@ -139,6 +139,13 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
 }
+.score__now {
+    font-size: 20px;
+    height: 20px;
+    width: 0;
+    transform: translateX(calc(50vw - 25px));
+    z-index: 1;
+}
 
 @media (max-width : 470px) {
     .memory-card {

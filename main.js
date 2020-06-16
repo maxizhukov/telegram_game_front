@@ -6,23 +6,32 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+let scoreCount = 0;
 function flipCard() {
+    scoreCount++;
+    document.getElementById("score__now").innerHTML = "Turns:" + Math.floor(scoreCount/2);
+    document.getElementById("score__result").innerHTML = "You have finished in" + " " + Math.floor(scoreCount/2) + "Steps";
+    if (scoreCount <= 6) {
+        document.getElementById("prize").innerHTML = "-20% for all menu";
+    } else if (scoreCount > 6 && scoreCount <= 10) {
+        document.getElementById("prize").innerHTML = "-15% for all menu";
+    } else {
+        document.getElementById("prize").innerHTML = "-10% for all menu";
+    }
     if (lockBoard) return;
     if (this === firstCard) return;
-   this.classList.add('flip');
+    this.classList.add('flip');
+    if (!hasFlippedCard) {
+        hasFlippedCard = true;
+        firstCard = this;
 
-   if (!hasFlippedCard) {
-       hasFlippedCard = true;
-       firstCard = this;
+        return;
+    }
+    hasFlippedCard = false;
+    secondCard = this;
 
-       return;
-   }
-       hasFlippedCard = false;
-       secondCard = this;
-
-       checkForMatching();
+    checkForMatching();
 }
-
 
 function checkForMatching() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
@@ -78,11 +87,17 @@ function hidePopup() {
 start.addEventListener('click', hidePopup);
 
 // Popup Endgame
-let popupend = document.getElementById('popup__end')
+let popupend = document.getElementById('popup__end');
 function showPopup() {
     popupend.style.opacity = "1"
     popupend.style.visibility = "visible"
 }
+
+// Count for score
+
+
+
+
 
 
 
