@@ -9,14 +9,14 @@ let firstCard, secondCard;
 let scoreCount = 0;
 function flipCard() {
     scoreCount++;
-    document.getElementById("score__now").innerHTML = "Turns:" + Math.floor(scoreCount/2);
+    document.getElementById("score__now").innerHTML = "Steps:" + Math.floor(scoreCount/2);
     document.getElementById("score__result").innerHTML = "You have finished in" + " " + Math.floor(scoreCount/2) + "Steps";
-    if (scoreCount <= 6) {
-        document.getElementById("prize").innerHTML = "-20% for all menu";
-    } else if (scoreCount > 6 && scoreCount <= 10) {
-        document.getElementById("prize").innerHTML = "-15% for all menu";
+    if (scoreCount/2 <= 6) {
+        document.getElementById("prize").innerHTML = "Bravo!bellissimo!Now you have 20% discount for all menu";
+    } else if (scoreCount/2 > 6 && scoreCount/2 <= 10) {
+        document.getElementById("prize").innerHTML = "Bravo!bellissimo!Now you have 15% discount for all menu";
     } else {
-        document.getElementById("prize").innerHTML = "-10% for all menu";
+        document.getElementById("prize").innerHTML = "Bravo!bellissimo!Now you have 10% discount for all menu";
     }
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -41,7 +41,6 @@ function checkForMatching() {
 let count = 0;
 function endGame() {
     count += 1;
-    console.log(count);
     if (count === 6) {
         showPopup();
     }
