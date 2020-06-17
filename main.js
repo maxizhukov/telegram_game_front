@@ -6,6 +6,17 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+let randomAbc = "lehaturebashitkur";
+let randomString = "";
+while (randomString.length < 2) {
+    randomString += randomAbc[Math.floor(Math.random() * randomAbc.length)].toLocaleUpperCase();
+}
+
+let date = new Date;
+let month = (date.getMonth() + 1).toString();
+let day = date.getDate().toString();
+let codeDate = day + month;
+
 let scoreCount = 0;
 function flipCard() {
     scoreCount++;
@@ -13,10 +24,13 @@ function flipCard() {
     document.getElementById("score__result").innerHTML = "You have finished in" + " " + Math.floor(scoreCount/2) + "Steps";
     if (scoreCount/2 <= 6) {
         document.getElementById("prize").innerHTML = "Bravo!bellissimo!Now you have 20% discount for all menu";
+        document.getElementById("benefit").innerHTML = "Your code is:" + " " + randomOne() + "20" + randomString + codeDate;
     } else if (scoreCount/2 > 6 && scoreCount/2 <= 10) {
         document.getElementById("prize").innerHTML = "Bravo!bellissimo!Now you have 15% discount for all menu";
+        document.getElementById("benefit").innerHTML = "Your code is:" + " " + randomOne() + "15" + randomString + codeDate;
     } else {
         document.getElementById("prize").innerHTML = "Bravo!bellissimo!Now you have 10% discount for all menu";
+        document.getElementById("benefit").innerHTML = "Your code is:" + " " + randomOne() + "10" + randomString + codeDate;
     }
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -92,7 +106,13 @@ function showPopup() {
     popupend.style.visibility = "visible"
 }
 
-// Count for score
+function randomOne() {
+    return Math.floor(Math.random() * 100000);
+}
+
+
+
+
 
 
 
