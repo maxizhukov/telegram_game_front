@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
     <title>Guess two cards</title>
@@ -12,75 +13,85 @@
 <body>
 <p id="score__now" class="score__now"></p>
     <section class="memory-game">
-        <div class="memory-card" data-framework="aurelia">
-            <img src="img/aurelia.svg" alt="Aurelia" class="front-face">
-            <img src="img/js-badge.svg" alt="Guess" class="back-face">
+        <div class="memory-card" data-framework="first">
+            <img src="img/sushione.png" alt="first" class="front-face">
+            <img src="img/questionsushi.png" alt="Guess" class="back-face">
         </div>
-        <div class="memory-card" data-framework="angular">
-            <img src="img/angular.svg" alt="Angular" class="front-face">
-            <img src="img/js-badge.svg" alt="Guess" class="back-face">
+        <div class="memory-card" data-framework="second">
+            <img src="img/sushitwo.png" alt="second" class="front-face">
+            <img src="img/questionsushi.png" alt="Guess" class="back-face">
         </div>
-        <div class="memory-card" data-framework="backbone">
-            <img src="img/backbone.svg" alt="Backbone" class="front-face">
-            <img src="img/js-badge.svg" alt="Guess" class="back-face">
+        <div class="memory-card" data-framework="third">
+            <img src="img/sushithre.png" alt="third" class="front-face">
+            <img src="img/questionsushi.png" alt="Guess" class="back-face">
         </div>
-        <div class="memory-card" data-framework="ember">
-            <img src="img/ember.svg" alt="Ember" class="front-face">
-            <img src="img/js-badge.svg" alt="Guess" class="back-face">
+        <div class="memory-card" data-framework="fourth">
+            <img src="img/sushifour.png" alt="fourth" class="front-face">
+            <img src="img/questionsushi.png" alt="Guess" class="back-face">
         </div>
-        <div class="memory-card" data-framework="react">
-            <img src="img/react.svg" alt="React" class="front-face">
-            <img src="img/js-badge.svg" alt="Guess" class="back-face">
+        <div class="memory-card" data-framework="fifth">
+            <img src="img/sushifive.png" alt="fifth" class="front-face">
+            <img src="img/questionsushi.png" alt="Guess" class="back-face">
         </div>
-        <div class="memory-card" data-framework="vue">
-            <img src="img/vue.svg" alt="Vue" class="front-face">
-            <img src="img/js-badge.svg" alt="Guess" class="back-face">
+        <div class="memory-card" data-framework="sixth">
+            <img src="img/sushisix.png" alt="sixth" class="front-face">
+            <img src="img/questionsushi.png" alt="Guess" class="back-face">
         </div>
-        <div class="memory-card" data-framework="aurelia">
-            <img src="img/aurelia.svg" alt="Aurelia" class="front-face">
-            <img src="img/js-badge.svg" alt="Guess" class="back-face">
+        <div class="memory-card" data-framework="first">
+            <img src="img/sushione.png" alt="first" class="front-face">
+            <img src="img/questionsushi.png" alt="Guess" class="back-face">
         </div>
-        <div class="memory-card" data-framework="angular">
-            <img src="img/angular.svg" alt="Angular" class="front-face">
-            <img src="img/js-badge.svg" alt="Guess" class="back-face">
+        <div class="memory-card" data-framework="second">
+            <img src="img/sushitwo.png" alt="second" class="front-face">
+            <img src="img/questionsushi.png" alt="Guess" class="back-face">
         </div>
-        <div class="memory-card" data-framework="backbone">
-            <img src="img/backbone.svg" alt="Backbone" class="front-face">
-            <img src="img/js-badge.svg" alt="Guess" class="back-face">
+        <div class="memory-card" data-framework="third">
+            <img src="img/sushithre.png" alt="third" class="front-face">
+            <img src="img/questionsushi.png" alt="Guess" class="back-face">
         </div>
-        <div class="memory-card" data-framework="ember">
-            <img src="img/ember.svg" alt="Ember" class="front-face">
-            <img src="img/js-badge.svg" alt="Guess" class="back-face">
+        <div class="memory-card" data-framework="fourth">
+            <img src="img/sushifour.png" alt="fourth" class="front-face">
+            <img src="img/questionsushi.png" alt="Guess" class="back-face">
         </div>
-        <div class="memory-card" data-framework="react">
-            <img src="img/react.svg" alt="React" class="front-face">
-            <img src="img/js-badge.svg" alt="Guess" class="back-face">
+        <div class="memory-card" data-framework="fifth">
+            <img src="img/sushifive.png" alt="fifth" class="front-face">
+            <img src="img/questionsushi.png" alt="Guess" class="back-face">
         </div>
-        <div class="memory-card" data-framework="vue">
-            <img src="img/vue.svg" alt="Vue" class="front-face">
-            <img src="img/js-badge.svg" alt="Guess" class="back-face">
+        <div class="memory-card" data-framework="sixth">
+            <img src="img/sushisix.png" alt="sixth" class="front-face">
+            <img src="img/questionsushi.png" alt="Guess" class="back-face">
         </div>
     </section>
     <div id="popup" class="popup">
         <div class="popup__body">
             <div class="popup__content">
+                <img src="img/whowant.png" alt="" class="start_image" width="100%">
                 <div class="popup__title">You need to choice all paired pictures</div>
-                <div class="popup__text">We will count your turns and if will be lucky and do just in 6 steps you will get 20% discount in less than 10 steps 15% discount and in more than 10 steps 10% discount</div>
-                <a href="#" class="popup__start" id="start">START</a>
+                <div class="popup__text">
+                    <p>We will give you real discount for your game achievements. Just try to collect all the cards in less steps.</p>
+                    <ul class="discounts">
+                        <li class="discount"><p>In 6 steps: -20%<button type="button" class="level__hard" disabled>HARD</button></p></li>
+                        <li class="discount"><p>In 6 steps: -15%<button type="button" class="level__medium" disabled>MEDIUM</button></p></li>
+                        <li class="discount"><p>In 6 steps: -10%<button type="button" class="level__easy" disabled>EASY</button></p></li>
+                    </ul>
+                </div>
+                <button class="play_button"><a href="#" class="popup__start" id="start">PLAY<i class="fas fa-play play"></i></a></button>
             </div>
         </div>
     </div>
     <div id="popup__end" class="popup__end">
         <div class="popup__body">
             <div class="popup__content">
-                <div class="popup__title">WIN! WIN! WIN!</div>
-                <div class="popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci at consequatur et impedit maxime modi veritatis vitae. Error, quo.</div>
-                <p class="score" id="score__result"></p>
-                <p class="prize" id="prize"></p>
-                <p class="benefit" id="benefit"></p>
-                <a href="#" class="popup__restart" id="restart" onClick="window.location.reload()">retry</a>
+                <img src="img/logorock.jpg" alt="" class="start_image" width="100%">
+                <div class="popup__title">WIN! WIN! WIN! <a href="#" class="popup__restart" id="restart" onClick="window.location.reload()"><i class="fas fa-sync-alt restart"></i></a></div>
+                <div class="popup__text">You can copy the code below and get your discount, or you can play one more time and try to get larger discount. Please do not forget, that you can use it only in the same day.</div>
+                <p class="score" id="score__result">Your score is 12</p>
+                <p class="prize" id="prize">You have 20% sale</p>
+                <p class="benefit__text">Here is your code</p>
+                <p class="benefit" id="benefit">4556457AD123</p>
             </div>
         </div>
     </div>
+<script src="https://kit.fontawesome.com/8eb688fe6b.js" crossorigin="anonymous"></script>
 </body>
 </html>
